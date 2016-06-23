@@ -10,7 +10,79 @@
 /* Font Google - strong reaload time */
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext);
 
+.fullscreen-bg {
+  
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($gray-base, .5);
+        z-index: 1;
+    }
+}
 
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 69%;
+  height: 100%;
+}
+.home-content {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 999;
+    text-align: center;
+    @include translate(-50%, -50%); 
+    h1 {
+        font-size:48px;
+        color: white;
+      padding:0 10px;
+        small {
+          font:300 18px  $font-regular ;
+          color: white;  
+          display: block;
+          margin: 10px 0;
+        }        
+    }
+   
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('http://ui.specbee.com/sample/videoframe.jpg') center center / cover no-repeat;
+    @include background-size(cover);
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
 /*
  * Theme Name: Onepage
  * Author: Thomsoon
@@ -213,130 +285,6 @@ h1 span{
 @keyframes bounce-fade {
     0%   { opacity: 0; bottom: 70px; }
     100% { opacity: 1; bottom: 35px; }
-}
-
-
-/* Menu mobile */
-
-.menu-media{
-  position:relative;
-  width:100%;
-  height:90px;
-  background:#ada074;
-  z-index:1000;
-  display:none;
-}
-
-.menu-media .menu-content{
-  width:280px;
-  position:relative;
-  margin:0 auto;
-}
-
-.menu-media .menu-content .logo {
-   color:white;
-   font-weight:700;
-   font-size:24px;
-   width:200px;
-   line-height:90px;
-   float:left;
-   list-style: none;
-}
-
-.menu-media .menu-content .icon{
-  width:41px;
-  height:23px;
-  float:right;
-  line-height:100px;
-}
-
-.menu-click{
-  display:none;
-}
-
-
-.menu-click li {
-  position:relative;
-  width:100%;
-  height:70px;
-  color:#333333;
-  font-size:18px;
-  text-align:center;
-  line-height:70px;
-  z-index:1000;
-  border-bottom:1px solid #f2f2f2;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
- }
-
-.menu-click li:hover {
-  color:#ada074;
- }
-
-
-/* Menu */
-
-.menu{
-  position:relative;
-  width:100%;
-  height:60px;
-  background:white;
-  border-bottom:1px solid #f2f2f2;
-  z-index:1000;
-}
-
-.menu-content{
-  width:900px;
-  position:relative;
-  margin:0 auto;
-}
-
-.menu-content .logo {
-   color:#333;
-   font-weight:700;
-   font-size:24px;
-   width:300px;
-   line-height:60px;
-   float:left;
-   list-style: none;
- }
-
-.menu-content ul{
-
-  width:500px;
-  left:50%;
-  float:right;
-  text-align:right;
-  list-style:none;
-}
-
-.menu-content li{
-   display:inline-block;
-   position:relative;
-}
-
-.menu-content li a{
-  color:#333;
-  font-size:16px;
-  display: block;
-  padding: 0 20px 0 20px;
-  line-height:60px;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
-
-.menu-content li.active a{
-  color:#ada074;
-}
-
-.menu-content li a:hover{
-  color:#ada074;
 }
 
 
@@ -658,67 +606,6 @@ h1 span{
 
 .clear { 
     clear:both; 
-}
-
-/* Partners */
-
-.partners{
-  position:relative;
-  width:100%;
-  z-index:10;
-  height:400px;
-  background:url('../img/background/partners.jpg') 0px 0px fixed;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.partners .opacity{
-  position:absolute;
-  width:100%;
-  height:400px;
-  background:rgba(79,79,79,0.6);
-}
-
-.partners .content{
-  position:absolute;
-  width:900px;
-  height:190px;
-  margin:auto;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-}
-
-.partners h2{
-  color:white;
-  letter-spacing:1px;
-  font-size:32px;
-  font-weight:300;
-  text-align:center;
-}
-
-.partners .logo{
-  position:relative;
-  width:900px;
-  overflow:hidden;
-  margin-top:50px;
-  text-align:center;
-}
-
-.partners .logo img{
-  opacity:0.5;
-  -webkit-transition: all 0.2s ease-in;
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;
-}
-
-.partners .logo img:hover{
-  opacity:1;
 }
 
 /* Contact */

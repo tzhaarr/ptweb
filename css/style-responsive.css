@@ -11,13 +11,6 @@
 /* iPad (portrait) */
 @media (min-width: 320px) and (max-width: 579px) {
 
-.menu{
-  display:none;
-}
-
-.menu-media{
-  display:block;
-}
 
 .start-page .content {
   width:300px;
@@ -62,15 +55,15 @@ h1 {
   width:300px;
 }
 
-.partners .content{
+ .content{
   width:300px;
 }
 
-.partners .logo {
+ .logo {
   width:300px;
 }
 
-.partners .logo img {
+.logo img {
   width:80px;
   padding-bottom:20px;
 }
@@ -126,19 +119,7 @@ textarea{
 /* iPad (portrait) */
 @media (min-width: 580px) and (max-width: 767px) {
 
-.menu{
-  display:none;
-}
-
-.menu-media{
-  display:block;
-}
-
-.menu-media .menu-content{
-  width:540px;
-}
-
-.partners .logo img {
+.logo img {
   padding-bottom:20px;
 }
 
@@ -185,15 +166,15 @@ h1 {
   width:300px;
 }
 
-.partners .content{
+ .content{
   width:400px;
 }
 
-.partners .logo {
+ .logo {
   width:400px;
 }
 
-.partners .logo img {
+ .logo img {
   width:80px;
   padding-bottom:20px;
 }
@@ -256,13 +237,10 @@ textarea{
 
 
 
-.menu-content .logo{
+ .logo{
   width:200px;
 }
 
-.menu-content{
-  width:700px;
-}
 
 .about-us .content{
   width:700px;
@@ -292,11 +270,11 @@ textarea{
   width:600px;
 }
 
-.partners .content{
+ .content{
   width:700px;
 }
 
-.partners .logo {
+.logo {
   width:700px;
 }
 
