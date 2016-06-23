@@ -759,27 +759,26 @@ input.submit{
 
 
 .footer{
-  position:fixed;
+
   bottom:0;
   width:100%;
-  background:#3c3c3c;
+
+
 }
 
-.footer .logo{
-
-  position:relative;
-  width:58px;
-  height:58px;
-  margin: 0 auto;
-  padding-top:50px;
-
+.background-footer{
+width:100%;
+  height: 100%;
+  background-image: url(../img/background/footer.png);
+background-size: 395px;
 }
 
 .footer .menu-footer{
+  
   width:80%;
   text-align:center;
   margin:0 auto;
-  padding-top:30px;
+  padding-top:70px;
   overflow: hidden;
   position:relative;  
 }
@@ -787,7 +786,7 @@ input.submit{
 
 .footer .menu-footer a{
   line-height:46px;
-  padding:10px;
+  padding:20px;
   color:#a4a4a4;
   -webkit-transition: all 0.2s ease-in;
 	-moz-transition: all 0.2s ease-in;
@@ -797,7 +796,7 @@ input.submit{
 }
 
 .footer .menu-footer a:hover{
-  color:#ada074;
+  color:grey;
 }
 
 
@@ -806,9 +805,9 @@ input.submit{
   position:relative;
   font-weight:300;
   margin:0 auto;
-  padding:30px 0 50px;
+  padding:30px 0 10px;
   text-align:center;
-  font-size:14px;
+  font-size:24px;
   line-height:36px;
   color:#a4a4a4;
 }

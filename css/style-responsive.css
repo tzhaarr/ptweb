@@ -111,7 +111,8 @@ textarea{
 .footer{
   position:relative;
 }
-
+.footer .menu-footer a{
+  padding: 10px;}
 }
 
 
