@@ -630,19 +630,16 @@ h1{
     clear:both; 
 }
 
+/*---------*/
 /* Contact */
-
+/*---------*/
 
 .contact{
   position:relative;
-  width:100%;
-   
-  z-index:10;
+  width:100%; 
   overflow:hidden;
   margin-bottom: 50px;  
 }
-
-
 .contact .content{
   position:relative;
   width:440px;
@@ -666,32 +663,27 @@ h1{
   line-height:1.2;
 }
 
-
-
 .contact .content .form{
   width:455px;
   overflow:hidden;
   height:auto;
   float:left;
-  
- 
 }
 
 .contact .content .form .column{
   width:210px;
-  padding-left:4px;
   overflow:hidden;
   height:auto;
   float:left;
   letter-spacing:1px;
   margin-bottom:10px;
   border: 2px solid;
+  margin-right: 11px;
 }
 
 .contact .content .form .column-2{
   width:210px;
   padding-left:1px;
-
   overflow:hidden;
   height:auto;
   float:left;
@@ -711,18 +703,7 @@ h1{
 }
 
 
-.contact .content .contact-text p{
-  display: inline-block;
-color: black;
-}
-
-strong{
-  font-weight:700;
-
-}
-
 input{
-
   width:210px;
   height:50px;
   border:0;
@@ -730,29 +711,30 @@ input{
   font-weight:300;
   line-height:40px;
   padding-left:15px;
-
-  font-family: 'Lato', sans-serif;
+  font-family: 'arial', sans-serif;
   font-size:14px;
-
 }
 
-input:focus{background:#f4f4f4;}
+input:focus{
+	outline: none;
+}
 
 textarea{
-
   width:430px;
-  height:150px;
+  height:140px;
   border:0;
   line-height:20px;
   color:#333;
   font-weight:300;
-  padding:15px 0 0 15px;
-  font-family: 'Lato', sans-serif;
+  padding:auto ;
+  font-family: 'arial', sans-serif;
   font-size:14px;
   margin-bottom:10px;
 }
 
-textarea:focus{background:#f4f4f4;}
+textarea:focus{
+	outline: none;
+}
 
 
 input.submit{
@@ -771,9 +753,9 @@ input.submit{
 	-o-transition: all 0.6s ease-in;
 	transition: all 0.6s ease-in;
 }
-
+/*--------*/
 /* Footer */
-
+/*--------*/
 
 .footer{
 
